@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Video Streaming</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+  <script type="text/javascript" src="{{ url_for('static', filename='jquery-3.1.1.min.js') }}"></script>
+  <script type="text/javascript" src="{{ url_for('static', filename='control.js') }}"></script>
+</head>
+<body>
+  <h1>Video Streaming</h1>
+  <div id="videoArea">
+    <img src="{{ url_for('video_feed') }}" width="640" height="480">
+  </div>
+  <div id="controlPad">
+    <button value="87" class="ctrl-btn ctrl-btn-full">前進</button>
+    <button value="65" class="ctrl-btn ctrl-btn-half">左回転</button>
+    <button value="68" class="ctrl-btn ctrl-btn-half">右回転</button>
+    <button value="83" class="ctrl-btn ctrl-btn-full">後退</button>
+    <p id="msg"></p>
+  </div>
+</body>
+</html>
